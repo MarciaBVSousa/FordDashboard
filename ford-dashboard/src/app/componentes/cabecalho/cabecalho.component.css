@@ -1,0 +1,61 @@
+.menu {
+  transform: scale(2.5);
+  margin: 15px;
+}
+
+.logoDiv {
+  height: 60px;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.logoMenu {
+  display: inline-block;
+  width: 120px;
+
+}
+
+.itemMenu {
+  padding: 10px 0px;
+  background-color: rgba(1, 47, 1, 0.189);
+  border: 1px rgba(1, 47, 1, 0.3) solid;
+}
+
+.itemMenu a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  padding-left: 10px;
+  color: green;
+  font-size: 20px;
+}
+
+.itemMenu:hover {
+  font-weight: bold;
+  background-color:rgba(2, 120, 2, .2);
+  border-left: 3px rgb(128, 0, 0) solid;
+}
+
+.logoutList {
+  padding: 5px;
+  list-style: none;
+  text-decoration: none;
+  width: 100%;
+  height: fit-content;
+}
+
+.logoutList a {
+  color: green;
+  height: fit-content ;
+}
+
+.logoutList a:hover {
+  color: rgb(31, 193, 31);
+  text-decoration: underline;
+}
+
+.logoutItems{
+  width: 100%;
+  text-align: center;
+}

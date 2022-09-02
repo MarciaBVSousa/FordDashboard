@@ -1,0 +1,21 @@
+<div class="container fluid">
+  <h3 class="mx-auto text-center py-3">Dashboard Ford</h3>
+</div>
+
+<div class="container vh-50">
+  <app-dashboard-cards></app-dashboard-cards>
+</div>
+
+<div>
+  <app-dashboard-table></app-dashboard-table>
+</div>
+
+<div class="d-flex justify-content-center mt-3">
+  <div>
+    <a [routerLink]="['cadastroVin']" routerLinkActive="router-link-active" >
+      <button class="cadastro">Cadastro de códigos</button>
+    </a>
+  </div>
+</div>
+
+

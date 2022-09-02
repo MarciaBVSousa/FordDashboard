@@ -1,0 +1,48 @@
+.cards {
+  border-radius: 5px;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  min-height: 130px;
+  min-width: 160px;
+
+}
+
+.cardNames {
+  padding: 15px 15px 5px;
+  background: linear-gradient(rgba(62, 61, 61, .1), rgba(179, 179, 179, 0.1));
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+}
+
+.cardsContent {
+  padding: 5px 15px 5px;
+}
+
+.inputCard {
+  margin: 20px 0px;
+}
+
+.cardNames h6 {
+  font-size: 16px;
+}
+
+.cardsContent h4 {
+  color: rgb(5, 109, 160);
+}
+
+.cardsContent p {
+  margin: 0px;
+  color: rgb(5, 109, 160);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cardsContent small {
+  color: rgb(113, 113, 113);
+  font-size: 14px;
+}
+
+.dashboardImg {
+  margin: auto;
+  padding: 20px;
+  max-height: 300px;
+  max-width: 600px;
+}

@@ -1,0 +1,23 @@
+.div-logo {
+  height: fit-content;
+}
+
+.logoLogin {
+  width: 160px;
+  padding: 15px;
+}
+
+.loginForm {
+  height: 400px;
+}
+
+.form-check-input:checked {
+  background-color: green;
+  border-color: green;
+}
+
+.form-check span {
+  color: green;
+}
+
+

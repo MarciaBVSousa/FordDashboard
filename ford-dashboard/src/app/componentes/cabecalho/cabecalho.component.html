@@ -1,0 +1,58 @@
+<header class="sticky-top" *ngIf="user$ | async as user">
+  <div *ngIf="user.name; else login">
+    <nav class="navbar navbar-light bg-white">
+      <a class="navbar-brand">
+        <i
+          (click)="menu.abreMenu()">
+          <svg width="16" height="16" fill="currentColor" class="bi bi-list menu" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </i>
+      </a>
+
+      <app-menu #menu>
+        <div class="d-flex justify-content-between logoDiv">
+          <div>
+            <img class="logoMenu" src="assets/img/ford.png" alt="Logotipo da Ford">
+          </div>
+          <button type="button" class="btn-close" aria-label="Close" (click)="menu.abreMenu()"></button>
+        </div>
+        <ul class="list-unstyled listaMenu">
+          <li class="itemMenu">
+            <a [routerLink]="['home']">Home</a>
+          </li>
+          <li class="itemMenu">
+            <a [routerLink]="['dashboard']">Dashboard</a>
+          </li>
+        </ul>
+      </app-menu>
+      <div>
+
+        <a class="navbar-brand">
+          <i
+            (click)="logout.abreMenuLogout()">
+            <svg width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </i>
+        </a>
+
+        <app-logout-menu #logout>
+          <ul class="logoutList">
+            <li class="logoutItems">
+              <p class="mr-1">{{ user.name }}</p>
+            </li>
+            <li class="logoutItems">
+              <a (click)="logout.logout()">Logout</a>
+            </li>
+          </ul>
+        </app-logout-menu>
+      </div>
+
+    </nav>
+  </div>
+
+  <ng-template #login>
+  </ng-template>
+
+</header>

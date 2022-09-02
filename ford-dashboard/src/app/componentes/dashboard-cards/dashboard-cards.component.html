@@ -1,0 +1,56 @@
+<div class="d-flex flex-wrap gap-3">
+  <div class="col">
+    <div class="cards">
+      <div class="cardNames">
+        <h6>Veículo</h6>
+      </div>
+      <div class="cardsContent inputCard">
+        <form #f="ngForm" (change)="onSelect(selected)">
+          <fieldset >
+            <select [(ngModel)]="selected" name="vehicle" [value]="selected.id" [(selectedIndex)]="selIndex" >
+              <option *ngFor="let veiculo of veiculos, index as i" [ngValue]="veiculo">{{veiculo.vehicle}}</option>
+            </select>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="cards">
+      <div class="cardNames">
+        <h6>Total de Vendas</h6>
+      </div>
+      <div class="cardsContent">
+        <p>{{selected.volumetotal}}</p>
+        <small>Unid</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="cards">
+      <div class="cardNames">
+        <h6>Conectados</h6>
+      </div>
+      <div class="cardsContent">
+        <p>{{selected.connected}}</p>
+        <small>Unid</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="cards">
+      <div class="cardNames">
+        <h6>Update Software</h6>
+      </div>
+      <div class="cardsContent">
+        <p>{{selected.softwareUpdates}}</p>
+        <small>Unid</small>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row dashboardImg">
+    <img [src]="selectedImg" alt="Imagem do modelo {{selected.vehicle}}">
+  </div>
+</div>

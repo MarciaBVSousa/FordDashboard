@@ -1,0 +1,44 @@
+
+<div class="container">
+  <div class="mx-auto loginForm d-flex flex-column justify-content-center">
+    <header class="po-page-login-header">
+      <h1 class="po-mb-md-4 po-mb-sm-1">
+        <div class="po-page-login-header-product-name">
+        </div>
+      </h1><div class="text-success">Boas-vindas</div>
+    </header>
+
+    <form class="form mt-4 d-flex flex-column gap-3" (ngSubmit)="login()" #loginForm="ngForm">
+      <div class="form-group">
+        <input class="form-control"
+          placeholder="Nome do Usuário"
+          [(ngModel)]="usuario"
+          name="usuario"
+          #campoUsuario="ngModel"
+          required
+        />
+        <app-mensagem *ngIf="campoUsuario.invalid && campoUsuario.touched"
+         mensagem="Usuário obrigatório.">
+        </app-mensagem>
+      </div>
+
+      <div class="form-group">
+        <input type="password"
+          class="form-control"
+          placeholder="Senha"
+          [(ngModel)]="senha"
+          name="senha"
+          #campoSenha="ngModel"
+          required
+        />
+        <app-mensagem *ngIf="campoSenha.invalid && campoSenha.touched"
+        mensagem ="Senha obrigatória">
+      </app-mensagem>
+      </div>
+
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-success btn-block" [disabled]="loginForm.invalid">Login</button>
+      </div>
+  </form>
+</div>
+

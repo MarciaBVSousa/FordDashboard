@@ -1,0 +1,22 @@
+.appFooter {
+  color: white;
+/*  background-color: rgb(42, 85, 149); */
+  background: #1b357e;
+  font-weight: 600;
+  font-size: .8em;
+}
+
+.socialIcon {
+  color: white;
+
+}
+
+.socialIcon:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+
+}
+
+.logoFooter {
+  height: 25px;
+}

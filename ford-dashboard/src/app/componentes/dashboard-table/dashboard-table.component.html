@@ -1,0 +1,57 @@
+
+  <div class="container-fluid d-flex flex-row justify-content-center">
+  <div class="col-3">
+    <div class="row header">
+      <h6>Código-Vin</h6>
+    </div>
+    <div class="row content" *ngIf="vin | async as VeiculosData">
+      <input  type="text"
+        placeholder="Busca pelo Código-Vin"
+        [(ngModel)]="vinCode"
+        [value]="vinCode"
+        maxlength="20"
+        (ngModelChange)="buscaVin(vinCode)"
+        />
+    </div>
+    <div class="row footer"></div>
+  </div>
+  <div class="col-9">
+    <div class="row header">
+      <div class="col-6">
+        <h6>Nível de Combustível</h6>
+      </div>
+      <div class="col-2">
+        <h6>Status</h6>
+      </div>
+      <div class="col-2">
+        <h6>Lat.</h6>
+      </div>
+      <div class="col-2">
+        <h6>Long.</h6>
+      </div>
+    </div>
+    <div class="row content" *ngIf="veiculoVin; else noData">
+      <div class="col-6">
+        <p>{{veiculoVin.fuelLevel}}</p>
+      </div>
+      <div class="col-2">
+        <p>{{veiculoVin.status}}</p>
+      </div>
+      <div class="col-2">
+        <p>{{veiculoVin.lat}}</p>
+      </div>
+      <div class="col-2">
+        <p>{{veiculoVin.long}}</p>
+      </div>
+    </div>
+    <div class="row footer"></div>
+  </div>
+</div>
+
+<ng-template #noData>
+  <div class="content">
+    <small [ngClass]="{ 'alert': statusVin() }">
+      {{ mensagem }}
+    </small>
+  </div>
+</ng-template>
