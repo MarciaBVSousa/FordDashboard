@@ -1,27 +1,38 @@
 # FordDashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+![Badge Angular CLI](https://img.shields.io/badge/Angular%20CLI-14.0.2-red)
+![Badge Node](https://img.shields.io/badge/Node-16.15.1-blue)
+![Badge Npm](https://img.shields.io/badge/Npm-8.15.0-yellow)
 
-## Development server
+Este é o projeto final do curso de Formação em TI do Senai / Cimatec, em parceria com a Ford.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## API / Server
 
-## Code scaffolding
+Para utilizar o dashboard, é necessário primeiro rodar a API.
+Para isso acesse o diretório da pasta api_ford/api pelo terminal e use o comando npm install, e em seguida o npm start.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+cd caminho_da_pasta/api_ford/api
+npm install
+npm start
+```
+A APi poderá então ser acessada na porta 3000 ( `http://localhost:3000/` ).
 
-## Build
+Agora com a API no ar, em outra janela do terminal acesse a pasta do app ford-dashboard e utilize o comando ng serve -o (para abrir uma janela no navegador com a aplicação).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+cd caminho_da_pasta/ford-dashboard
+ng serve -o
+```
 
-## Running unit tests
+Dessa forma o server já estará funcionando em `http://localhost:4200/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Login
 
-## Running end-to-end tests
+Para ter acesso ao dashboard, o usuário deve primeiramente fazer o login.
+O usuário padrão cadastrado é o admin senha 123456.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Dashboard
 
-## Further help
+Uma vez logado, o usuário terá acesso ao Dashboard. Nele poderá selecionar um modelo do veículo através do dropdown para obter informações, bem como pesquisar informações de veículos cadastrados através do código Vin e cadastrar novos veículos.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
